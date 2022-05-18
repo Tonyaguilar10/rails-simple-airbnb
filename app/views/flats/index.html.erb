@@ -1,0 +1,12 @@
+<div class= "header">
+  <h1>FLATS</h1>
+</div>
+<div>
+  <ul class="list-inline">
+  <% @flats.each do |flat| %>
+    <li class= "link"><%= link_to flat.name, flat_path(flat) %>| <%= link_to "X", flat_path(flat), method: :delete,
+            data: { confirm: "Are you sure?" } %> </li>
+  <% end %>
+  </ul>
+  <a href= "/flats/new" class= "btn-grey">Add a flat</a>
+</div>
